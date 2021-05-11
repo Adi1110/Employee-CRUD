@@ -32,13 +32,12 @@ public class EmployeeServiceImpl implements EmployeeService{
         repo.deleteById(id);
     }
 
-    @Override
-    public void updateEmployee(Long id, Employee employee) {
-        Employee employeeFromDb = repo.findById(id).get();
-        System.out.println(employeeFromDb.toString());
-        employeeFromDb.setFirstName(employee.getFirstName());
-        employeeFromDb.setLastName(employee.getLastName());
-        employeeFromDb.setAge(employee.getAge());
-        repo.save(employeeFromDb);
-    }
+	/*
+	 * @Override public void updateEmployee(Long id, Employee employee) { Employee
+	 * employeeFromDb = repo.findById(id).get();
+	 * System.out.println(employeeFromDb.toString());
+	 * employeeFromDb.setFirstName(employee.getFirstName());
+	 * employeeFromDb.setLastName(employee.getLastName());
+	 * employeeFromDb.setAge(employee.getAge()); repo.save(employeeFromDb); }
+	 */
 }
